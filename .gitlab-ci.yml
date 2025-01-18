@@ -1,0 +1,25 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - mkdir .public
+    - cp index.html .public/
+    - cp styles.css .public/
+    - cp script.js .public/
+    - cp -r Images .public/
+    - mkdir -p .public/Data
+    - mkdir -p .public/Data/Abdu
+    - mkdir -p .public/Data/Thibault
+    - mkdir -p .public/Data/Hani
+    - cp Data/Abdu/Enriched_Streaming_History.json .public/Data/Abdu
+    - cp Data/Thibault/Enriched_Streaming_History.json .public/Data/Thibault
+    - cp Data/Hani/Enriched_Streaming_History.json .public/Data/Hani
+    - cp Data/periode.json .public/Data/
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

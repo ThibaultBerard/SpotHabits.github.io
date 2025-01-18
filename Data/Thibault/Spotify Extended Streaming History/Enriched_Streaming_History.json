@@ -1,0 +1,30 @@
+[
+    {
+        "ts": "2024-01-29T17:56:02Z",
+        "platform": "Android OS 4.4.2 API 19 (HTC, HTC One mini 2)",
+        "ms_played": 186240,
+        "conn_country": "FR",
+        "ip_addr": "84.97.142.148",
+        "master_metadata_track_name": "Numb",
+        "master_metadata_album_artist_name": "Linkin Park",
+        "master_metadata_album_album_name": "Meteora",
+        "spotify_track_uri": "spotify:track:2nLtzopw4rPReszdYBJU6h",
+        "episode_name": null,
+        "episode_show_name": null,
+        "spotify_episode_uri": null,
+        "reason_start": "trackdone",
+        "reason_end": "trackdone",
+        "shuffle": true,
+        "skipped": false,
+        "offline": false,
+        "offline_timestamp": null,
+        "incognito_mode": false,
+        "genres": [
+            "alternative metal",
+            "nu metal",
+            "post-grunge",
+            "rap metal",
+            "rock"
+        ]
+    }
+]

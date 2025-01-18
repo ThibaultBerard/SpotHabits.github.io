@@ -1,0 +1,159 @@
+{
+  "topArtists": {
+    "numUniqueArtists": 272,
+    "topArtists": [
+      {
+        "artistUri": "spotify:artist:0UF7XLthtbSF2Eur7559oV",
+        "monthlyStreams": [
+          {
+            "month": 10,
+            "biweeklyStreams": [
+              {
+                "period": 1,
+                "numStreams": 62
+              },
+              {
+                "period": 2,
+                "numStreams": 19
+              }
+            ]
+          },
+          {
+            "month": 11,
+            "biweeklyStreams": [
+              {
+                "period": 1,
+                "numStreams": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "artistUri": "spotify:artist:3YBJLs7RqR0aPGBgU27nDh",
+        "monthlyStreams": [
+          {
+            "month": 11,
+            "biweeklyStreams": [
+              {
+                "period": 1,
+                "numStreams": 70
+              }
+            ]
+          },
+          {
+            "month": 10,
+            "biweeklyStreams": [
+              {
+                "period": 2,
+                "numStreams": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "artistUri": "spotify:artist:0k17h0D3J5VfsdmQ1iZtE9",
+        "monthlyStreams": [
+          {
+            "month": 10,
+            "biweeklyStreams": [
+              {
+                "period": 2,
+                "numStreams": 57
+              }
+            ]
+          },
+          {
+            "month": 11,
+            "biweeklyStreams": [
+              {
+                "period": 1,
+                "numStreams": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "artistUri": "spotify:artist:6sYR8JTRUUUzSD9IydLhfG",
+        "monthlyStreams": [
+          {
+            "month": 10,
+            "biweeklyStreams": [
+              {
+                "period": 2,
+                "numStreams": 52
+              }
+            ]
+          },
+          {
+            "month": 11,
+            "biweeklyStreams": [
+              {
+                "period": 1,
+                "numStreams": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "artistUri": "spotify:artist:58wXmynHaAWI5hwlPZP3qL",
+        "monthlyStreams": [
+          {
+            "month": 10,
+            "biweeklyStreams": [
+              {
+                "period": 1,
+                "numStreams": 25
+              },
+              {
+                "period": 2,
+                "numStreams": 19
+              }
+            ]
+          },
+          {
+            "month": 11,
+            "biweeklyStreams": [
+              {
+                "period": 1,
+                "numStreams": 10
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "topArtistMilliseconds": 16108808,
+    "topArtistFanPercentage": 0.010313481
+  },
+  "topGenres": {
+    "topGenres": [
+      "french hip hop",
+      "rock",
+      "rap",
+      "pop"
+    ],
+    "numberGenres": 9
+  },
+  "topTracks": {
+    "topTracks": [
+      "spotify:track:3kzXT2poHInDISrXOgT1PR",
+      "spotify:track:3uEwbhvBSlE3pWT9yQfC1P",
+      "spotify:track:6GMZJA5MOO8qvFI2xZPYXf",
+      "spotify:track:5tgOWODhYf8CpVUyStG6Sm",
+      "spotify:track:2IhZelVn4t2c6GeGeIsvz2"
+    ],
+    "topTrackPlayCount": 47,
+    "topTrackFirstPlayedDate": "2023-11-02",
+    "distinctTracksPlayed": 365
+  },
+  "yearlyMetrics": {
+    "totalMsListened": 199741107,
+    "mostListenedDay": "2023-10-28",
+    "mostListenedDayMinutes": 226.5788,
+    "percentGreaterThanWorldwideUsers": 48.53676
+  }
+}

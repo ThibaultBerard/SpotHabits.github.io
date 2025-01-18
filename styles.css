@@ -1,0 +1,473 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif; 
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f9; 
+  color: #333; 
+}
+
+header {
+  background-color: #4a148c; 
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700; 
+}
+
+footer {
+  background-color: #4a148c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 500; 
+}
+
+
+section h2 {
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a148c; 
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #762ec4;
+}
+
+section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+section ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+
+}
+
+section ul li strong {
+  color: #007bff;
+  font-size: 1.2em;
+}
+
+footer a {
+  color: #c87d55;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto;
+  gap: 20px; 
+  padding: 20px; 
+}
+
+#timeline_chart {
+  grid-column: 1 / 3; 
+  grid-row: 1; 
+  text-align: center; 
+  background-color: #e3f2fd;
+  padding: 20px;
+}
+
+#donut-chart {
+  grid-column: 1;
+  grid-row: 2; 
+  background-color: #e3f2fd;
+  padding: 20px;
+}
+#Bars {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #e3f2fd;
+  padding: 20px;
+}
+#spider-chart-panel {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.toggle-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#spider-chart-panel .charts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#spider-chart, #spider-chart2 {
+  flex: 1;
+  text-align: center;
+}
+
+#spider-chart {
+  background-color: #e3f2fd;
+}
+
+#spider-chart2 {
+  background-color: #ffcccc;
+}
+
+#spider-chart .spider-chart-wrapper,
+#spider-chart2 .spider-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+i.fab.fa-github {
+  font-size: 1.5em;
+  color: #000000; 
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-panel section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.right-panel {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.spider-chart-panel {
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.spider-chart-panel section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.spider-chart-panel .hidden {
+  display: none;
+}
+
+.spider-chart-panel:has(section:not(.hidden):only-of-type) {
+  justify-content: center; 
+}
+
+svg {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+}
+
+.cover-image {
+  position: relative;
+  height: 300px;
+  background-image: url("Images/banner/banner_cropped.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#welcome-svg {
+  display: block;
+  height: auto;
+  border-radius: 15px; 
+}
+.tooltip_donut {
+  position: absolute;
+  opacity: 0;
+  background: rgba(74, 20, 140, 0.9); 
+  color: white;
+  padding: 12px; 
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: 1rem; 
+  font-family: 'Roboto', Arial, sans-serif; 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background-color: #f4f4f9;
+}
+
+.circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #4a148c; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle::after {
+  content: attr(data-username);
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: white;
+  font-size: 1.2rem; 
+  font-family: 'Roboto', Arial, sans-serif; 
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.circle:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.circle.selected1 {
+  border: 10px solid blue;
+  border-radius: 50%; /* Assure que la bordure reste circulaire */
+  padding: 2px; /* Optionnel : ajuste l'espace à l'intérieur si nécessaire */
+}
+
+.circle.selected2 {
+  border: 10px solid red;
+  border-radius: 50%; /* Assure que la bordure reste circulaire */
+  padding: 2px; /* Optionnel : ajuste l'espace à l'intérieur si nécessaire */
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;  
+  border-bottom: 2px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab {
+  padding: 12px 30px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  background-color: #f9f9f9;
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.tab:hover {
+  background-color: #e2e2e2; 
+  transform: scale(1.05); 
+}
+
+.tab.active {
+  background-color: #fff;
+  border-top: 2px solid #007bff;
+  border-color: #007bff;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.tab.active:hover {
+  background-color: #f4faff; 
+  transform: scale(1.05); 
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  padding-bottom: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#tab3 p {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+#toggle-label {
+  padding-left: 10px; 
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4a148c;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+#spider-chart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#spider-chart-compare {
+  display: none;
+}
+
+#yearSelectorDiv {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#yearSelect {
+  margin-left: 10px;
+}
+
+#tab3 {
+  padding: 0 3rem;
+}
+
+.spider-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  padding: 10px;
+}
+
+/* Styles pour les labels */
+.spider-chart-wrapper label {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 10px 15px;
+  font-size: 1em; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  background-color: #f9f9f9;
+  transition: all 0.3s ease; 
+}
+
+
+select:focus {
+  border-color: #007bff; 
+  background-color: #e6f0ff;
+  outline: none; 
+}
+
+.hidden {
+  display: none;
+}
+
+.spider-chart-wrapper div {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}

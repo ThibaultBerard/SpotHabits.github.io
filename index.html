@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualisation de données musicales</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Onglets de navigation -->
+  <div class="tabs">
+    <div class="tab active" data-tab="tab1"><strong>Visualisation principale</strong></div>
+    <div class="tab" data-tab="tab2"><strong> À propos </strong></div>
+  </div>
+
+  <!-- Contenu des onglets -->
+  <div class="tab-content" id="tab1">
+    <!-- En-tête -->
+    <header class="cover-image"></header>
+
+    <!-- Sélection de l'utilisateur -->
+    <div id="user-selection" class="circle-container">
+      <div class="circle" id="Abdu" data-username="Abdu">
+        <img src="Images/Profile pic/Abdu.png" alt="User 1" />
+      </div>
+      <div class="circle" id="Hani" data-username="Hani">
+        <img src="Images/Profile pic/Hani.png" alt="User 2" />
+      </div>
+      <div class="circle" id="Nassim" data-username="Nassim">
+        <img src="Images/Profile pic/Nassim.png" alt="User 3" />
+      </div>
+      <div class="circle" id="Thibault" data-username="Thibault">
+        <img src="Images/Profile pic/Thibault.png" alt="User 4" />
+      </div>
+    </div>
+
+    <!-- Conteneur principal -->
+    <main class="grid-container">
+      <!-- Timeline Chart -->
+      <div id="timeline_chart" class="full-row">
+        <h2>Timeline</h2>
+        <svg id="welcome-svg" width="1400" height="400" viewBox="0 0 1400 400">
+          <image x="0" y="0" width="100%" height="100%" href="Images/banner/spotify-gif.gif" preserveAspectRatio="xMidYMid slice" />
+        </svg>
+      </div>
+    
+      <!-- Donut Chart -->
+      <div id="donut-chart">
+        <h2>Visualization of listened genres</h2>
+      </div>
+    
+      <!-- Bar Chart -->
+      <div id="Bars">
+        <h2>Bars</h2>
+      </div>
+
+      <!-- Spider Chart -->
+      <div id="spider-chart-panel">
+        <div class="toggle-container">
+          <label class="switch">
+            <input type="checkbox" id="spider-toggle" />
+            <span class="slider"></span>
+          </label>
+          <span id="toggle-label"><h2>Mode Comparaison </h2></span>
+        </div>
+
+        <div class="charts-wrapper">
+          <section id="spider-chart" class="p-4">
+            <div class="spider-chart-wrapper">
+              <div id="spider-chart-1"></div>
+            </div>
+          </section>
+
+          <section id="spider-chart2" class="p-4 hidden">
+            <div class="spider-chart-wrapper">
+              <div id="spider-chart-2"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- About -->
+  <div class="tab-content" id="tab2">
+    <!--style="background-image: url('images/banner/banner.avif'); background-size: cover; background-position: center; padding: 40px;"-->
+    <section>
+      <h2>À propos</h2>
+
+
+      <h3>Source des données</h3>
+      <p>
+        Les données utilisées dans ce projet proviennent de la plateforme Spotify. En effet, Spotify offre la
+        possibilité d'accéder à des données personnelles sur les utilisateurs, via son API ouverte. Ces données incluent
+        des informations détaillées sur les genres musicaux écoutés, les artistes, les morceaux et d'autres
+        comportements d'écoute.
+      </p>
+      <p>
+        Chaque utilisateur peut obtenir ses propres données via la plateforme, après avoir accordé l'accès à son compte
+        Spotify. Les informations utilisées dans ce projet sont donc personnelles et spécifiques à chaque utilisateur,
+        respectant la confidentialité et les choix de l'utilisateur.
+      </p>
+    </section>
+
+    <section>
+      <h3>Objectif du projet</h3>
+      <p>
+        L'objectif de ce projet est de permettre aux utilisateurs de visualiser leurs données musicales personnelles, en
+        mettant en lumière les genres musicaux qu'ils écoutent, ainsi que l'évolution de leurs habitudes d'écoute selon
+        différents contextes tels que les périodes de cours ou de travail.
+      </p>
+      <p>
+        Les visualisations proposées sont interactives, offrant à chaque utilisateur la possibilité d'explorer ses
+        propres préférences musicales et de les comparer avec celles d'autres utilisateurs, permettant ainsi une analyse
+        plus approfondie de ses habitudes d'écoute.
+      </p>
+    </section>
+
+    <section>
+      <h3>Traitement des données</h3>
+      <p>
+        Les données fournies par Spotify sont initialement stockées dans une base de données locale. Toutefois, ces
+        données ne contiennent pas toutes les informations nécessaires, notamment les genres des titres. Pour enrichir
+        ces données, nous avons utilisé l'API de Spotify, qui nous permet d'obtenir des informations détaillées sur les
+        genres associés à chaque morceau de musique.
+      </p>
+
+      <p>
+        Après cette phase d'enrichissement et de traitement, les données ont été agrégées et transformées dans des
+        formats adaptés aux différents types de graphiques et visualisations proposées dans ce projet. Cela permet
+        d'offrir une représentation claire et précise des habitudes d'écoute de chaque utilisateur.
+      </p>
+    </section>
+
+    <section>
+      <h3>Source des codes utilisés</h3>
+      <ul>
+        <li>
+          Le projet utilise principalement la bibliothèque JavaScript
+          <a href="https://d3js.org" target="_blank">D3.js</a> pour la création de graphiques interactifs.
+        </li>
+        <li>
+          Le Donut Chart a été inspiré du code fourni sur
+          <a href="https://observablehq.com/@d3/pie-chart-update" target="_blank">Observable</a>.
+        </li>
+        <li>
+          La Timeline a été inspirée du projet
+          <a href="https://rawgit.com/patternfly/patternfly-timeline/master-dist/demo/">Patternfly-Timeline</a>
+          dans la fonctionnalité, notamment pour l'utilisation de brush.
+        </li>
+        <li>
+          Le Spider Chart a été inspiré du code fourni sur
+          <a href="https://yangdanny97.github.io/blog/2019/03/01/D3-Spider-Chart" target="_blank">D3 Spider Chart Tutorial</a>.
+      </ul>
+    </section>
+    <section>
+      <h3>Membres du projet</h3>
+      <p>
+        Ce projet a été réalisé par un groupe d'étudiants en <a href="http://master-info.univ-lyon1.fr/IA/">Master 2 Intelligence Artificielle</a> à l'<a href="https://www.univ-lyon1.fr/">Université Claude Bernard Lyon 1</a>.<br/>
+        Les membres de l'équipe sont :
+        <ul>
+          <li><strong>Hani BOUNOUA</strong>: <a href="https://github.com/Hanibou" target="_blank" title="Voir le profil GitHub de Hani Bounoua"><i class="fab fa-github"></i></a></li>
+          <li><strong>Abdurrahman SEN</strong>: <a href="https://github.com/senabIsShort" target="_blank" title="Voir le profil GitHub d'Abdurrahman Sen"><i class="fab fa-github"></i></a></li>
+          <li><strong>Nassim MESSIKH</strong>: <a href="https://github.com/RyuGaro" target="_blank" title="Voir le profil GitHub de Nassim Messikh"><i class="fab fa-github"></i></a></li>
+          <li><strong>Thibault BERARD</strong>: <a href="https://github.com/ThibaultBerard" target="_blank" title="Voir le profil GitHub de Thibault Berard"><i class="fab fa-github"></i></a></li>
+        </ul>
+        
+    </section>
+    <section>
+  <h3>Contributions</h3>
+  <ul>
+    <li>
+      <strong>Hani</strong><br>
+      Responsable du prétraitement des données, de la structure générale du site web et de la conception du Donut Chart.
+    </li>
+    <li>
+      <strong>Abdurrahman</strong><br>
+      Conception et développement de la Timeline, qui sert de contrôle central pour les autres visualisations    </li>
+    <li>
+      <strong>Nassim</strong><br>
+      Création du Bar Chart pour représenter les données analytiques.
+    </li>
+    <li>
+      <strong>Thibault</strong><br>
+      Chargé de la conception et du développement du Spider Chart pour visualiser les comportements utilisateurs.
+    </li>
+  </ul>
+</section>
+
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('active'));
+        contents.forEach((c) => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+<!-- Pied de page -->
+<footer>
+  <p>
+    Ce projet a été réalisé dans le cadre du cours de <a href="https://lyondataviz.github.io/teaching/lyon1-m2/2024/">Data Visualization</a>
+    enseigné par Aurélien Tabard à l’<a href="https://www.univ-lyon1.fr/">Université Claude Bernard Lyon 1</a>.
+  </p>
+  Copyright © 2024
+</footer>
+
+</html>
