@@ -45,7 +45,7 @@
       <!-- Timeline Chart -->
       <div id="timeline_chart" class="full-row">
         <h2>Timeline</h2>
-        <svg id="welcome-svg" width="1400" height="400" viewBox="0 0 1400 400">
+        <svg id="welcome-svg" width="1200" height="400" viewBox="0 0 1200 400">
           <image x="0" y="0" width="100%" height="100%" href="Images/banner/spotify-gif.gif" preserveAspectRatio="xMidYMid slice" />
         </svg>
       </div>
@@ -88,111 +88,122 @@
   </div>
 
   <!-- About -->
-  <div class="tab-content" id="tab2">
-    <!--style="background-image: url('images/banner/banner.avif'); background-size: cover; background-position: center; padding: 40px;"-->
+  <div class="tab-content" id="tab2" style="text-align: center;">
+
     <section>
       <h2>À propos</h2>
-
-
       <h3>Source des données</h3>
-      <p>
-        Les données utilisées dans ce projet proviennent de la plateforme Spotify. En effet, Spotify offre la
-        possibilité d'accéder à des données personnelles sur les utilisateurs, via son API ouverte. Ces données incluent
-        des informations détaillées sur les genres musicaux écoutés, les artistes, les morceaux et d'autres
-        comportements d'écoute.
-      </p>
-      <p>
-        Chaque utilisateur peut obtenir ses propres données via la plateforme, après avoir accordé l'accès à son compte
-        Spotify. Les informations utilisées dans ce projet sont donc personnelles et spécifiques à chaque utilisateur,
-        respectant la confidentialité et les choix de l'utilisateur.
-      </p>
+      <div class="content-box">
+        <p>
+          Les données utilisées dans ce projet proviennent de la plateforme Spotify. En effet, Spotify offre la
+          possibilité d'accéder à des données personnelles sur les utilisateurs, via son API ouverte. Ces données incluent
+          des informations détaillées sur les genres musicaux écoutés, les artistes, les morceaux et d'autres
+          comportements d'écoute.
+        </p>
+        <p>
+          Chaque utilisateur peut obtenir ses propres données via la plateforme, après avoir accordé l'accès à son compte
+          Spotify. Les informations utilisées dans ce projet sont donc personnelles et spécifiques à chaque utilisateur,
+          respectant la confidentialité et les choix de l'utilisateur.
+        </p>
+      </div>
     </section>
-
+  
     <section>
       <h3>Objectif du projet</h3>
-      <p>
-        L'objectif de ce projet est de permettre aux utilisateurs de visualiser leurs données musicales personnelles, en
-        mettant en lumière les genres musicaux qu'ils écoutent, ainsi que l'évolution de leurs habitudes d'écoute selon
-        différents contextes tels que les périodes de cours ou de travail.
-      </p>
-      <p>
-        Les visualisations proposées sont interactives, offrant à chaque utilisateur la possibilité d'explorer ses
-        propres préférences musicales et de les comparer avec celles d'autres utilisateurs, permettant ainsi une analyse
-        plus approfondie de ses habitudes d'écoute.
-      </p>
+      <div class="content-box">
+        <p>
+          L'objectif de ce projet est de permettre aux utilisateurs de visualiser leurs données musicales personnelles, en
+          mettant en lumière les genres musicaux qu'ils écoutent, ainsi que l'évolution de leurs habitudes d'écoute selon
+          différents contextes tels que les périodes de cours ou de travail.
+        </p>
+        <p>
+          Les visualisations proposées sont interactives, offrant à chaque utilisateur la possibilité d'explorer ses
+          propres préférences musicales et de les comparer avec celles d'autres utilisateurs, permettant ainsi une analyse
+          plus approfondie de ses habitudes d'écoute.
+        </p>
+      </div>
     </section>
-
+  
     <section>
       <h3>Traitement des données</h3>
-      <p>
-        Les données fournies par Spotify sont initialement stockées dans une base de données locale. Toutefois, ces
-        données ne contiennent pas toutes les informations nécessaires, notamment les genres des titres. Pour enrichir
-        ces données, nous avons utilisé l'API de Spotify, qui nous permet d'obtenir des informations détaillées sur les
-        genres associés à chaque morceau de musique.
-      </p>
-
-      <p>
-        Après cette phase d'enrichissement et de traitement, les données ont été agrégées et transformées dans des
-        formats adaptés aux différents types de graphiques et visualisations proposées dans ce projet. Cela permet
-        d'offrir une représentation claire et précise des habitudes d'écoute de chaque utilisateur.
-      </p>
+      <div class="content-box">
+        <p>
+          Les données fournies par Spotify sont initialement stockées dans une base de données locale. Toutefois, ces
+          données ne contiennent pas toutes les informations nécessaires, notamment les genres des titres. Pour enrichir
+          ces données, nous avons utilisé l'API de Spotify, qui nous permet d'obtenir des informations détaillées sur les
+          genres associés à chaque morceau de musique.
+        </p>
+        <p>
+          Après cette phase d'enrichissement et de traitement, les données ont été agrégées et transformées dans des
+          formats adaptés aux différents types de graphiques et visualisations proposées dans ce projet. Cela permet
+          d'offrir une représentation claire et précise des habitudes d'écoute de chaque utilisateur.
+        </p>
+      </div>
     </section>
-
+    
+ 
     <section>
       <h3>Source des codes utilisés</h3>
-      <ul>
-        <li>
-          Le projet utilise principalement la bibliothèque JavaScript
-          <a href="https://d3js.org" target="_blank">D3.js</a> pour la création de graphiques interactifs.
-        </li>
-        <li>
-          Le Donut Chart a été inspiré du code fourni sur
-          <a href="https://observablehq.com/@d3/pie-chart-update" target="_blank">Observable</a>.
-        </li>
-        <li>
-          La Timeline a été inspirée du projet
-          <a href="https://rawgit.com/patternfly/patternfly-timeline/master-dist/demo/">Patternfly-Timeline</a>
-          dans la fonctionnalité, notamment pour l'utilisation de brush.
-        </li>
-        <li>
-          Le Spider Chart a été inspiré du code fourni sur
-          <a href="https://yangdanny97.github.io/blog/2019/03/01/D3-Spider-Chart" target="_blank">D3 Spider Chart Tutorial</a>.
-      </ul>
+        <ul style="margin: 0 auto; padding: 0; text-align: left; display: inline-block; list-style-position: inside;">
+          <li>
+            Le projet utilise principalement la bibliothèque JavaScript
+            <a href="https://d3js.org" target="_blank">D3.js</a> pour la création de graphiques interactifs.
+          </li>
+          <li>
+            Le Donut Chart a été inspiré du code fourni sur
+            <a href="https://observablehq.com/@d3/pie-chart-update" target="_blank">Observable</a>.
+          </li>
+          <li>
+            La Timeline a été inspirée du projet
+            <a href="https://rawgit.com/patternfly/patternfly-timeline/master-dist/demo/">Patternfly-Timeline</a>
+            dans la fonctionnalité, notamment pour l'utilisation de brush.
+          </li>
+          <li>
+            Le Spider Chart a été inspiré du code fourni sur
+            <a href="https://yangdanny97.github.io/blog/2019/03/01/D3-Spider-Chart" target="_blank">D3 Spider Chart Tutorial</a>.
+          </li>
+        </ul>
+      
     </section>
+
     <section>
       <h3>Membres du projet</h3>
-      <p>
-        Ce projet a été réalisé par un groupe d'étudiants en <a href="http://master-info.univ-lyon1.fr/IA/">Master 2 Intelligence Artificielle</a> à l'<a href="https://www.univ-lyon1.fr/">Université Claude Bernard Lyon 1</a>.<br/>
-        Les membres de l'équipe sont :
-        <ul>
+      
+        <p>
+          Ce projet a été réalisé par un groupe d'étudiants en <a href="http://master-info.univ-lyon1.fr/IA/">Master 2 Intelligence Artificielle</a> à l'<a href="https://www.univ-lyon1.fr/">Université Claude Bernard Lyon 1</a>.<br />
+          Les membres de l'équipe sont :
+        </p>
+        <ul style="margin: 0 auto; padding: 0; text-align: left; display: inline-block; list-style-position: inside;">
           <li><strong>Hani BOUNOUA</strong>: <a href="https://github.com/Hanibou" target="_blank" title="Voir le profil GitHub de Hani Bounoua"><i class="fab fa-github"></i></a></li>
           <li><strong>Abdurrahman SEN</strong>: <a href="https://github.com/senabIsShort" target="_blank" title="Voir le profil GitHub d'Abdurrahman Sen"><i class="fab fa-github"></i></a></li>
           <li><strong>Nassim MESSIKH</strong>: <a href="https://github.com/RyuGaro" target="_blank" title="Voir le profil GitHub de Nassim Messikh"><i class="fab fa-github"></i></a></li>
           <li><strong>Thibault BERARD</strong>: <a href="https://github.com/ThibaultBerard" target="_blank" title="Voir le profil GitHub de Thibault Berard"><i class="fab fa-github"></i></a></li>
         </ul>
-        
+      </section>
+      
+      <section>
+      <h3>Contributions</h3>
+        <ul style="margin: 0 auto; padding: 0; text-align: left; display: inline-block; list-style-position: inside;">
+          <li>
+            <strong>Hani</strong><br>
+            Responsable du prétraitement des données, de la structure générale du site web et de la conception du Donut Chart.
+          </li>
+          <li>
+            <strong>Abdurrahman</strong><br>
+            Conception et développement de la Timeline, qui sert de contrôle central pour les autres visualisations
+          </li>
+          <li>
+            <strong>Nassim</strong><br>
+            Création du Bar Chart pour représenter les données analytiques.
+          </li>
+          <li>
+            <strong>Thibault</strong><br>
+            Chargé de la conception et du développement du Spider Chart pour visualiser les comportements utilisateurs.
+          </li>
+        </ul>
+      </div>
     </section>
-    <section>
-  <h3>Contributions</h3>
-  <ul>
-    <li>
-      <strong>Hani</strong><br>
-      Responsable du prétraitement des données, de la structure générale du site web et de la conception du Donut Chart.
-    </li>
-    <li>
-      <strong>Abdurrahman</strong><br>
-      Conception et développement de la Timeline, qui sert de contrôle central pour les autres visualisations    </li>
-    <li>
-      <strong>Nassim</strong><br>
-      Création du Bar Chart pour représenter les données analytiques.
-    </li>
-    <li>
-      <strong>Thibault</strong><br>
-      Chargé de la conception et du développement du Spider Chart pour visualiser les comportements utilisateurs.
-    </li>
-  </ul>
-</section>
-
+  
   </div>
 
   <script>
@@ -209,7 +220,7 @@
       });
     });
   </script>
-  <script type="module" src="script.js"></script>
+  <script type="module" src="scripts/script.js"></script>
 </body>
 <!-- Pied de page -->
 <footer>
